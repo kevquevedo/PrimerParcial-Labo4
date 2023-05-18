@@ -1,0 +1,31 @@
+<div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+      <!-- NOMBRE -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> NOMBRE </th>
+        <td class="pizza" mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+      </ng-container>
+
+      <!-- PRECIO -->
+      <ng-container matColumnDef="precio">
+        <th mat-header-cell *matHeaderCellDef> PRECIO </th>
+        <td class="pizza" mat-cell *matCellDef="let element"> ${{element.precio}} </td>
+      </ng-container>
+
+      <!-- PESO-->
+      <ng-container matColumnDef="peso">
+        <th mat-header-cell *matHeaderCellDef> PESO </th>
+        <td class="pizza" mat-cell *matCellDef="let element"> {{element.peso}} GR</td>
+      </ng-container>
+
+      <!-- INGREDIENTES -->
+      <ng-container matColumnDef="ingredientes">
+        <th mat-header-cell *matHeaderCellDef> INGREDIENTES </th>
+        <td class="pizza" mat-cell *matCellDef="let element"> {{element.ingredientes}} </td>
+      </ng-container>
+
+      <tr mat-header-row  *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row (click)="clickLinea(row)" *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

@@ -1,0 +1,46 @@
+<body>
+  <main>
+    <div class="container py-4">
+      <header class="pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <span class="fs-4">Pizzas</span>
+        </a>
+      </header>
+
+      <div class="p-1 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-2">
+          <h1 class="d-flex justify-content-center border-bottom">Listado de Pizzas</h1>
+          <div class="tabla">
+            <app-tabla-pizzas (pizzaElegida)="pizzaSeleccionada($event)"></app-tabla-pizzas>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-md-stretch">
+
+        <div class="col-md-4">
+          <div class="p-3 text-bg-dark rounded-3">
+            <h3>Crear Pizza</h3>
+            <app-crear-pizza (pizzaCreada)="crearPizza($event)"></app-crear-pizza>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 text-bg-dark rounded-3">
+            <h3>Modificar Pizza</h3>
+            <app-modificar-pizza [pizzaElegida]="pizza"></app-modificar-pizza>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="p-3 text-bg-dark rounded-3">
+            <h3>Borrar Pizza</h3>
+            <app-borrar-pizza [pizzaElegida]="pizza"></app-borrar-pizza>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</body>

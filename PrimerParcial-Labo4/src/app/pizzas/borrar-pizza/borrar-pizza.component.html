@@ -1,0 +1,9 @@
+<div *ngIf="pizzaElegida == undefined" class="d-flex justify-content-center">
+  <h4>No seleccionó ninguna pizza!</h4>
+</div>
+<div *ngIf="pizzaElegida != undefined">
+  <p>Nombre de Pizza: {{pizzaElegida.nombre}}</p>
+  <div class="d-grid gap-2 col-8 mx-auto">
+    <button type="submit" class="btn btn-primary" (click)="borrarPizza()">Borrar Pizza</button>
+  </div><br><br>
+</div>

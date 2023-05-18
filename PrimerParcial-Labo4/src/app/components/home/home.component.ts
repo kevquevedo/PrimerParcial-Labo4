@@ -11,6 +11,7 @@ declare var window:any;
 export class HomeComponent implements OnInit {
 
   toast :any;
+  modal :any;
 
   constructor(
     private uServ : UsuarioService
@@ -20,12 +21,22 @@ export class HomeComponent implements OnInit {
     this.uServ.acceso.subscribe(resp => {
       this.mensaje()
     })
+    this.uServ.rol.subscribe(resp => {
+      this.mensajeModal()
+    })
   }
 
   mensaje(){
     this.toast = document.getElementById('toast');
     const toastBootstrap = window.bootstrap.Toast.getOrCreateInstance(this.toast)
     toastBootstrap.show();
+  }
+
+  mensajeModal(){
+    this.modal = document.getElementById('mensajeAdminModal');
+    const modalBootstrap = window.bootstrap.Modal.getOrCreateInstance(this.modal)
+    modalBootstrap.show();
+    setTimeout(() =>{ modalBootstrap.hide(); },2000)
   }
 
 }

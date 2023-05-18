@@ -2,6 +2,7 @@
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 
+<!-- Toast LOGIN-->
 <div>
   <div class="toast-container position-fixed bottom-0 end-0 p-3 ">
     <div id="toast" class="toast text-bg-danger" role="alert" aria-live="assertive" aria-atomic="true">
@@ -12,6 +13,21 @@
       </div>
       <div class="toast-body">
         Debe iniciar sesión para poder utilizar la sección seleccionada.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal ADMIN-->
+<div class="modal fade" id="mensajeAdminModal" tabindex="-1" aria-labelledby="mensajeAdminModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content text-bg-danger">
+      <div class="modal-header">
+        <h5 class="modal-title" id="mensajeAdminModalLabel">Mensaje</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Debe iniciar sesión con perfil de ADMIN para esta sección!
       </div>
     </div>
   </div>
