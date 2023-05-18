@@ -9,7 +9,7 @@ import { Paises } from 'src/app/models/paises/paises';
 export class PaisesService {
 
   public paises$!: Observable<Paises[]>;
-  private paises!: Subject<Paises[]>;
+  public paises!: Subject<Paises[]>;
 
   constructor(
     private httpClient: HttpClient

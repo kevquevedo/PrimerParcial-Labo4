@@ -17,6 +17,7 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

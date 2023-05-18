@@ -1,0 +1,13 @@
+table {
+  width: 70%;
+  margin: 20px;
+}
+
+th{
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.repartidor{
+  cursor: pointer;
+}
