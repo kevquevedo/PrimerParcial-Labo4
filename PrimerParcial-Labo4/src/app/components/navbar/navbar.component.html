@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary " data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" >Primer Parcial - Quevedo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <div class="dropdown">
+        <a class="nav-link px-3 text-white btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Repartidor
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" routerLink="repartidor/alta">Alta</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTONES DE LOGIN Y LOGOUT -->
+    <ng-container *ngIf="usuarioRegistrado == undefined">
+      <button type="button" class="ms-auto btn btn-primary" id="inicio" routerLink="login">Iniciar Sesión</button>
+    </ng-container>
+
+    <ng-container *ngIf="usuarioRegistrado != undefined" >
+      <small class="text-light mx-2">Hola <small class="text-primary">{{usuarioRegistrado}}</small> !</small>
+      <button type="button" class="ms-auto btn btn-outline-danger" id="cierre" (click)="cerrarSesion()">Cerrar Sesión</button>
+    </ng-container>
+
+  </div>
+</nav>

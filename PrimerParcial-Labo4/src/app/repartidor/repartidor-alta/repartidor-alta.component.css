@@ -1,0 +1,28 @@
+.form-label,
+.input-group-text{
+  font-size: 15pt;
+}
+
+.form-floating,
+.input-group{
+  margin: 20px;
+  margin-bottom: 40px;
+}
+
+.alert,
+p{
+  display: flex;
+  justify-content: center;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.loader{
+  width: 200px;
+  height: 200px;
+}

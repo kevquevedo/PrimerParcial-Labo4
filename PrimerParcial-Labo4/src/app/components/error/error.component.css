@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+p{
+  font-family: 'Bruno Ace SC', cursive;
+  font-size: 20pt;
+}
+
+div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
